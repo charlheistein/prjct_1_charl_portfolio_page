@@ -1,8 +1,8 @@
 /* Global Layout Set-up */
-* { 
+* {
   box-sizing: border-box;
 }
-  
+
 body {
   margin: 0;
   padding: 0;
@@ -18,7 +18,13 @@ a {
   color: #999;
 }
 a:hover {
-  color: #6633ff;
+  color: #fff;
+}
+
+li.active a
+{
+  text-decoration: underline;
+  color: #6ba8d3;
 }
 
 /* Section Styles */
@@ -41,9 +47,9 @@ a:hover {
 }
 
 .nav .name {
-    display: block;
-    margin-right: auto;
-    color: white;
+  display: block;
+  margin-right: auto;
+  color: white;
 }
 .nav li {
   padding: 5px 10px 10px 10px;
@@ -57,7 +63,7 @@ a:hover {
 
 header {
   text-align: center;
-  background: url('images/portland.jpg') no-repeat top center ;
+  background: url('images/blurbg.jpg') no-repeat top center ;
   background-size: cover;
   overflow: hidden;
   padding-top: 60px;
@@ -74,7 +80,11 @@ header .profile-image {
   transition: all .5s;
 }
 header .profile-image:hover {
-  transform: scale(1.2) rotate(5deg);
+  transform: scale(1.2) rotate(-360deg);
+  border: 6px solid white;
+  -webkit-box-shadow: 0 0 8px -1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0 0 8px -1px rgba(0,0,0,0.75);
+  box-shadow: 0 0 8px -1px rgba(0,0,0,0.75);
 }
 .tag {
   background-color: #efefef;
@@ -83,10 +93,10 @@ header .profile-image:hover {
   border-radius: 5px;
   display: table;
   margin: 10px auto;
-} 
+}
 .location {
   background-color: #222;
-  color: yellow;
+  color: #6ba8d3;
 }
 .card {
   margin: 30px;
@@ -99,8 +109,29 @@ header .profile-image:hover {
   transition: all .5s;
 }
 .card:hover {
-  border-color: #ff99ff;
+  border-color: #6ba8d3;
 }
+
+.card-html:hover {
+  border-color: #6ba8d3;
+}
+.card-css:hover {
+  border-color: #5076ae;
+}
+.card-js:hover {
+  border-color: #ac5c75;
+}
+.card-php:hover {
+  border-color: #725a95;
+}
+.card-digitalliteracy:hover {
+  border-color: #bb91d9;
+}
+.card-wp:hover {
+  border-color: #7762a0;
+}
+
+
 
 ul.skills {
   padding: 0;
@@ -110,14 +141,47 @@ ul.skills {
 .skills li {
   border-radius: 6px;
   display: inline-block;
-  background: #ff9904;
+  background: #bc4d69;
   color: white;
   padding: 5px 10px;
   margin: 2px;
 }
 
-.skills li:nth-child(odd) {
-  background: #0399ff;
+.skills li.skill-html {
+  background: #6ba8d3;
+}
+h2.skill-html {
+  color: #6ba8d3;
+}
+.skills li.skill-js {
+  background: #ac5c75;
+}
+h2.skill-js {
+  color: #ac5c75;
+}
+.skills li.skill-php {
+  background: #7762a0;
+}
+h2.skill-php {
+  color: #7762a0;
+}
+.skills li.skill-digitalliteracy {
+  background: #bb91d9;
+}
+h2.skill-digitalliteracy {
+  color: #bb91d9;
+}
+.skills li.skill-ruby {
+  background: #c55a56;
+}
+h2.skill-css {
+  color: #5076ae;
+}
+.skills li.skill-wp {
+  background: #725a95;
+}
+h2.skill-wp {
+  color: #725a95;
 }
 
 footer {
@@ -169,14 +233,14 @@ a.social:hover {
 
 /* Styles for larger screens */
 @media screen and (min-width: 720px) {
-  
+
   .flex {
-      display: -ms-flexbox;      /* TWEENER - IE 10 */
-      display: flex; 
-      max-width: 1200px;
-      -ms-flex-pack: distribute;
-      justify-content: space-around;
-      margin: 0 auto;
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: flex;
+    max-width: 1200px;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    margin: 0 auto;
   }
 
   header {
@@ -204,4 +268,41 @@ a.social:hover {
   }
 
 }
-
+/* ----- chei added styles ----- */
+section.experience-intro
+{
+  padding-top: 60px;
+}
+.intro-text
+{
+  background-color: #fff;
+  margin: 30px auto 15px;
+  padding: 1em 1em 2em;
+  max-width: 1100px;
+  border-radius: 6px;
+}
+body.experience-page
+{
+  background: #fff url('images/macro-pattern.png') repeat;
+}
+a.netflix-link
+{
+  color: #c52a08;
+  text-decoration: underline;
+  transition: all .5s;
+}
+a.netflix-link:hover {
+  color: #6ba8d3;
+}
+a.netflix-btn {
+  background-color: #c52a08;
+  color: white;
+  display: inline-block;
+  padding: 5px 20px;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  transition: all .5s;
+}
+a.netflix-btn:hover {
+  border: 1px solid #c52a08;
+}
